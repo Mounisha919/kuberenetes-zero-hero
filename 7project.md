@@ -17,4 +17,19 @@ minikuda addons ingress
  kubect portforward svc/backendservice 80:80 -n app
 
  kubectlm apply -f .
+ --------
+ nodeexporter---for every node and pod
+
+ graphana password-----kubectl get secret \
+  --namespace <your-namespace> \
+  grafana \
+  -o jsonpath="{.data.admin-password}" | base64 --decode ; echo
+  =====
+  same system you have kindcluster and eks then set kubectl use ckubectl config get-contexts
+kubectl config use-context kind-kind
+==============
+=======================================================================================================================================================
+MAIN PRJ
+
+
  
